@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ATM</h1>
+        <div id="login">
+            <label for="account">Select Account:</label>
+            <select id="account">
+                <option value="0">Mali</option>
+                <option value="1">Gera</option>
+                <option value="2">Maui</option>
+            </select>
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="authenticate()">Login</button>
+        </div>
+        <div id="options" style="display: none;">
+            <button onclick="checkBalance()">Check Balance</button>
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+        <div id="balance" style="display: none;">
+            <p id="current-balance"></p>
+        </div>
+        <div id="transaction" style="display: none;">
+            <input type="number" id="amount" placeholder="Enter Amount">
+            <button onclick="confirmTransaction()">Confirm</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
